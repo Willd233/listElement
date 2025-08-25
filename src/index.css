@@ -1,0 +1,98 @@
+:root {
+  --background: #f5f5f5;
+  --base-font-size: 62.5%;
+
+  --max-width: 120rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1c1b1f;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: var(--base-font-size);
+}
+
+body {
+  color: #fff;
+  background: #212227;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.toast-container {
+  font-size: 1.4rem;
+}
+
+input {
+  font-size: 1.4rem;
+  background-color: #3b3a4ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

@@ -1,0 +1,83 @@
+.container {
+  max-width: 1280px;
+  min-height: 100vh;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.add-item {
+  flex: 1;
+  align-self: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: center;
+}
+
+.label {
+  font-size: 1.3rem;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 0.5rem;
+  width: 50%;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+aside {
+  flex: 1;
+  align-self: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list-item {
+  display: flex;
+  list-style: none;
+  font-size: 1.6rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  width: 50%;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(0, 123, 255);
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: rgb(0, 100, 210);
+}
+
+.button--delete {
+  background-color: rgb(255, 0, 0);
+  width: max-content;
+}
+
+.button--delete:hover {
+  background-color: rgba(210, 0, 0, 0.74);
+}
