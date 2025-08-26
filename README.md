@@ -69,6 +69,19 @@ Make sure you have the following installed:
 - **`npm run build`**: Compiles and bundles the application for production.
 - **`npm run lint`**: Lints the code to find and fix issues.
 - **`npm run preview`**: Serves the production build locally to preview it.
+- **`npm run test`**: Runs the tests using Vitest.
+
+---
+
+## 🧪 Testing
+
+This project uses [**Vitest**](https://vitest.dev/) for testing, along with [**React Testing Library**](https://testing-library.com/docs/react-testing-library/intro/) for component testing and [**Happy DOM**](https://github.com/capricorn86/happy-dom) to simulate a DOM environment.
+
+To run the tests, use the following command:
+
+```bash
+npm run test
+```
 
 ---
 
