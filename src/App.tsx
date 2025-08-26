@@ -90,7 +90,7 @@ export default function App() {
                 ))}
               </>
             ) : (
-              <li className="list-item">No items found</li>
+              <h3>No items found</h3>
             )}
           </ul>
         </aside>
