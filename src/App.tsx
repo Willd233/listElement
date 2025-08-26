@@ -40,11 +40,11 @@ export default function App() {
     <>
       <main className="container">
         <section className="add-item">
-          <h1 className="title">Add Element in List</h1>
+          <h1 className="title">Create Item</h1>
           <CreateItems onSubmit={handleSubmit} />
         </section>
         <aside>
-          <h1 className="title">List Element</h1>
+          <h1 className="title">List of Items</h1>
           <Items items={items} handleDelete={handleDelete} />
         </aside>
       </main>
