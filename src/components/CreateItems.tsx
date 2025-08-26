@@ -17,7 +17,8 @@ export function CreateItems({ onSubmit }: TCreateItemsProps) {
           id="item"
           name="item"
           required
-          aria-label="New item title"
+          aria-label="New item"
+          placeholder="New phone item"
         />
       </div>
       <button type="submit" className="button">

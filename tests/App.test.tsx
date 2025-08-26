@@ -1,7 +1,10 @@
+// Dependencies.
+import { userEvent } from "@testing-library/user-event";
 import { describe, test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
+
+// Components.
 import App from "../src/App";
-import { userEvent } from "@testing-library/user-event";
 
 describe("<App />", () => {
   test("should add items and delete items", async () => {
