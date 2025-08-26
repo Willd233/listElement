@@ -1,23 +1,18 @@
-import React, { useState } from "react";
+// Dependencies.
+import { useState } from "react";
+
+// Components.
+import { Items } from "./components/Items";
+import { CreateItems } from "./components/CreateItems";
+
+// Types.
+import type { ItemId, TItems } from "./types";
+
+// Styles.
 import "./App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
-
-type ItemId = `${string}-${string}-${string}-${string}-${string}`;
-
-type Items = {
-  id: ItemId;
-  title: string;
-};
-
-const ITEMS: Items[] = [
-  { id: crypto.randomUUID(), title: "Car" },
-  { id: crypto.randomUUID(), title: "Bike" },
-  { id: crypto.randomUUID(), title: "Bus" },
-];
 
 export default function App() {
-  const [items, setItems] = useState(ITEMS);
+  const [items, setItems] = useState<TItems[]>([]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -46,53 +41,11 @@ export default function App() {
       <main className="container">
         <section className="add-item">
           <h1 className="title">Add Element in List</h1>
-          <form
-            onSubmit={handleSubmit}
-            aria-label="Add new item form"
-            className="form"
-          >
-            <div>
-              <label htmlFor="item" className="label">
-                New Item
-              </label>
-              <input
-                type="text"
-                id="item"
-                name="item"
-                required
-                aria-label="New item title"
-              />
-            </div>
-            <button type="submit" className="button">
-              Add item
-              <FontAwesomeIcon icon={faPlus} />
-            </button>
-          </form>
+          <CreateItems onSubmit={handleSubmit} />
         </section>
         <aside>
           <h1 className="title">List Element</h1>
-          <ul aria-label="List of items" className="list">
-            {items.length > 0 ? (
-              <>
-                {items.map(({ id, title }) => (
-                  <li key={id} className="list-item">
-                    {title}
-                    <button
-                      onClick={() => {
-                        handleDelete(id);
-                      }}
-                      className={`${"button"} ${"button--delete"}`}
-                    >
-                      Delete
-                      <FontAwesomeIcon icon={faTrash} />
-                    </button>
-                  </li>
-                ))}
-              </>
-            ) : (
-              <h3>No items found</h3>
-            )}
-          </ul>
+          <Items items={items} handleDelete={handleDelete} />
         </aside>
       </main>
     </>
