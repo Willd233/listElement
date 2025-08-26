@@ -5,6 +5,9 @@ import { useState } from "react";
 import { Items } from "./components/Items";
 import { CreateItems } from "./components/CreateItems";
 
+// Hooks.
+import { UseSeo } from "./hooks/UseSeo";
+
 // Types.
 import type { ItemId, TItems } from "./types";
 
@@ -13,6 +16,11 @@ import "./App.css";
 
 export default function App() {
   const [items, setItems] = useState<TItems[]>([]);
+
+  UseSeo({
+    title: `${items.length} items`,
+    description: "A simple app to create and manage a list of items.",
+  });
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
