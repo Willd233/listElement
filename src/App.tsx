@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 type ItemId = `${string}-${string}-${string}-${string}-${string}`;
 
 type Items = {
   id: ItemId;
   title: string;
-}[];
+};
 
-const ITEMS: Items = [
+const ITEMS: Items[] = [
   { id: crypto.randomUUID(), title: "Car" },
   { id: crypto.randomUUID(), title: "Bike" },
   { id: crypto.randomUUID(), title: "Bus" },
@@ -55,6 +57,7 @@ export default function App() {
               </label>
               <input
                 type="text"
+                id="item"
                 name="item"
                 required
                 aria-label="New item title"
@@ -62,6 +65,7 @@ export default function App() {
             </div>
             <button type="submit" className="button">
               Add item
+              <FontAwesomeIcon icon={faPlus} />
             </button>
           </form>
         </section>
@@ -79,7 +83,8 @@ export default function App() {
                       }}
                       className={`${"button"} ${"button--delete"}`}
                     >
-                      delete
+                      Delete
+                      <FontAwesomeIcon icon={faTrash} />
                     </button>
                   </li>
                 ))}
